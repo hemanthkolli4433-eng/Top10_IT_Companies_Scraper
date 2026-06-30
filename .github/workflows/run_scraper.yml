@@ -3,6 +3,10 @@ name: Run Top 10 IT Companies Scraper
 on:
   workflow_dispatch:
 
+  schedule:
+    # Runs every 6 hours in UTC time
+    - cron: "0 */6 * * *"
+
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
